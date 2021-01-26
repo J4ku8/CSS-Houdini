@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="19c35ba2-43a1-4e46-aed5-e4a56c784727" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animation/animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/animation/animation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/font.html" beforeDir="false" afterPath="$PROJECT_DIR$/font.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paint/paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/paint/paint.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/parser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/properties/properties.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
