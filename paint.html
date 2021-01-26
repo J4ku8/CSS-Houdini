@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1.0" />
+    <title>CSS Houdini-Paint API</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main>
+    <section class="glass">
+        <div class="nav">
+            <div>
+                <h1><a href="index.html">CSS Houdini </a></h1>
+                <img id="houdini" alt="CSS Houdini" src="img/houdini.jpeg" />
+            </div>
+            <div class="active">
+                <h3>Prepared</h3>
+                <ul>
+                    <li><a href="paint.html" class="link">Paint API</a></li>
+                    <li><a href="layout.html" class="link">Layout API</a></li>
+                    <li><a href="animation.html" class="link">Animation worklet</a></li>
+                    <li><a href="properties.html" class="link">Properties and values</a></li>
+                </ul>
+            </div>
+            <div class="inactive">
+                <h3>Not read yet</h3>
+                <ul>
+                    <li><a href="parser.html" class="link">Parser API</a></li>
+                    <li><a href="font.html" class="link">Font API</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a target="_blank" style="font-weight: bold" href="https://drafts.css-houdini.org" class="source">W3 specification drafts</a></li>
+                    <li><a class="source" target="_blank" href="https://github.com/w3c/css-houdini-drafts/wiki"><img id="git" alt="CSS Houdini gitHub" src="img/git.png"/></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title">
+                <h1>Paint API</h1>
+            </div>
+            <div class="description">
+                <p>
+                    The Paint API allows developers to use JavaScript functions to draw directly into an element’s background, border, or content using 2D Rendering Context, which is a subset of the HTML5 Canvas API. Paint API uses Paint Worklet to draw an image that dynamically responds to changes in CSS (changes in CSS variables, for example). Anyone familiar with Canvas API will feel right at home with Houdini’s Paint API.
+                </p>
+            </div>
+            <button id="ripple">Click me</button>
+        </div>
+    </section>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+</main>
+<script src="js/properties.js">
+</script>
+<script src="js/paintworklet.js">
+</script>
+</body>
+</html>
