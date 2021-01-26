@@ -44,13 +44,31 @@
         </div>
         <div class="content">
             <div class="title">
-                <h1>Propertis and Values API</h1>
+                <h1>Properties and Values API</h1>
             </div>
             <div class="description">
-            <p>Custom Properties, extend CSS Variables to allow us to register properties and define their type, initial value, and determine inheritance. <br>
-            </p>
+            <p>Custom Properties, extend CSS Variables to allow us to register properties and define their type, initial value, and determine inheritance. <br></p>
+                <br>
+                <p>Worklet example:</p>
+                <code class="language-javascript">
+                    CSS.registerProperty({<br>
+                    name:'--color-hover',<br>
+                    syntax: &lt;color&gt;,<br>
+                    initialValue: 'transparent',<br>
+                    inherits: false
+                    });
+                </code>
+                <br>
+                <br>
+                <p>What we have defined:</p>
+                <ol class="doted_list">
+                    <li class="list">name: is name of property which we then use as variable in css file</li>
+                    <li class="list">syntax: defines how to parse property, could accept &lt;integer&gt;, &lt;number&gt;, &lt;time&gt;, etc.. </li>
+                    <li class="list">initialValue: this property is used if no value is passed in</li>
+                    <li class="list">inherits: tells browser if should be inherit down to the DOM tree</li>
+                </ol>
+                <div class="box"></div>
             </div>
-            <div class="box"></div>
         </div>
     </section>
     <div class="circle1"></div>

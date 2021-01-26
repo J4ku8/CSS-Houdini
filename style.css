@@ -74,6 +74,13 @@ li{
     list-style: none;
 }
 
+.list{
+    list-style: circle;
+}
+.doted_list{
+    margin-left: 3rem;
+}
+
 a{
     text-decoration: none;
     color: #222831;
@@ -141,7 +148,9 @@ p{
 }
 
 .description{
+    overflow: scroll;
     width: 40vw;
+    max-height: 60vh;
     margin-left: 4rem;
     margin-right: 4rem;
     background: linear-gradient(
