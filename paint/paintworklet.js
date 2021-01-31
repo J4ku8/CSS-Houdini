@@ -26,23 +26,6 @@ CSS.registerProperty({
     initialValue: 0,
 });
 
-const button = document.querySelector('#ripple');
-button.addEventListener('click', evt => {
-    button.classList.add('animating');
-    const [x, y] = [evt.clientX, evt.clientY];
-    const start = performance.now();
-    requestAnimationFrame(function raf(now) {
-        const count = Math.floor(now - start);
-        button.style.cssText = `--ripple-x: ${x}; --ripple-y: ${y}; --animation-tick: ${count};`;
-        if(count > 1000) {
-            button.classList.remove('animating');
-            button.style.cssText = `--animation-tick: 0`;
-            return;
-        }
-        requestAnimationFrame(raf);
-    })
-})
-
 /*
 Copyright 2016 Google, Inc. All Rights Reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -56,29 +39,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-
 registerPaint('ripple', class {
-    static get inputProperties() {
-        return [
-            'background-color',
-            '--ripple-color',
-            '--animation-tick',
-            '--ripple-x',
-            '--ripple-y'
-        ];
-    }
+    static get inputProperties() { return ['background-color', '--ripple-color', '--animation-tick', '--ripple-x', '--ripple-y']; }
     paint(ctx, geom, properties) {
-        const bgColor = properties.get('background-color');
-        const rippleColor = properties.get('--ripple-color');
-        const x = properties.get('--ripple-x');
-        const y = properties.get('--ripple-y');
-        let tick = properties.get('--animation-tick');
-
-        if (tick < 0) {
+        const bgColor = properties.get('background-color').toString();
+        const rippleColor = properties.get('--ripple-color').toString();
+        const x = parseFloat(properties.get('--ripple-x').toString());
+        const y = parseFloat(properties.get('--ripple-y').toString());
+        let tick = parseFloat(properties.get('--animation-tick').toString());
+        if(tick < 0)
             tick = 0;
-        } else if (tick > 1000) {
+        if(tick > 1000)
             tick = 1000;
-        }
 
         ctx.fillStyle = bgColor;
         ctx.fillRect(0, 0, geom.width, geom.height);

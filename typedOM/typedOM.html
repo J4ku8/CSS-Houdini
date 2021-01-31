@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" initial-scale=1.0" />
-    <title>CSS Houdini-Propertis and Values API</title>
+    <title>CSS Houdini</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap"
@@ -79,38 +79,65 @@
         </div>
         <div class="content">
             <div class="title">
-                <h1>Properties and Values API</h1>
+                <h1>Typed Object Model</h1>
             </div>
             <div class="description">
-            <p>Custom Properties, extend CSS Variables to allow us to register properties and define their type, initial value, and determine inheritance. <br></p>
+                <p>
+                    The Typed OM is an extension to the existing CSS Object Model (CSSOM) that exposes CSS values as typed JavaScript objects, instead of a simple strings like they are today.
+                    <br/>
+                    <br/>
+                    This is code example of Typed Object Model:
+                    <code>
+                        element.attributeStyleMap.set('opacity', CSS.number(.5));
+                    </code>
+                    <br/>
+                    <br/>
+                </p>
+                <p>
+                Element is some variable declared by querrySelector. AttributeStyleMap access CSS of element. Then we can use get or set for work with CSS. In case we would use get, we will get acctual value of property.
+            </p>
                 <br>
-                <p>Worklet example:</p>
-                <code class="language-javascript">
-                    CSS.registerProperty({<br>
-                    name:'--color-hover',<br>
-                    syntax: &lt;color&gt;,<br>
-                    initialValue: 'transparent',<br>
-                    inherits: false
-                    });
-                </code>
+                <h3>Changing property on hover.</h3>
+                <div class="box" id="box" onmouseover="opacityOn()" onmouseout="opacityOut()"></div>
+
                 <br>
-                <br>
-                <p>What we have defined:</p>
-                <ol class="doted_list">
-                    <li class="list">name: is name of property which we then use as variable in css file</li>
-                    <li class="list">syntax: defines how to parse property, could accept &lt;integer&gt;, &lt;number&gt;, &lt;time&gt;, etc.. </li>
-                    <li class="list">initialValue: this property is used if no value is passed in</li>
-                    <li class="list">inherits: tells browser if should be inherit down to the DOM tree</li>
-                </ol>
-                <div class="box"></div>
+                <h3>Changing proeprty by user input.</h3>
+                <form>
+                    <label for="number">Number:</label><br>
+                    <input type="number" id="number" name="number" min="0" max="100"><br>
+                </form>
+                <div class="bar">
+                    <div class="fill" ><span id="percents">100%</span></div>
+                </div>
             </div>
         </div>
     </section>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
+    <div class="circle1" ></div>
+    <div class="circle2" ></div>
 </main>
+<script src="../properties/properties.js"></script>
 <script src="../common.js">
 </script>
-<script src="properties.js"></script>
+<script>
+    function opacityOn(){
+        let circle1 = document.querySelector(".box");
+        circle1.attributeStyleMap.set('opacity', CSS.number(.5));
+    }
+    function opacityOut(){
+        document.getElementById("box").style.opacity = "1";
+    }
+
+    //TODO
+    function calcWidth(){
+        const number = document.querySelector('#number');
+        const fill = document.querySelector('.fill');
+        const borderWidth=fill.computedStyleMap().get('width').value;
+        number.addEventListener('input', ()=>{
+            document.getElementById("percents").innerHTML = number.value+"%";
+            fill.attributeStyleMap().set('width', CSS.px((number.value*borderWidth)/100));
+        })
+    }
+    calcWidth()
+</script>
 </body>
 </html>

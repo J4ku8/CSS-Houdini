@@ -5,7 +5,8 @@
 }
 
 :root{--color-a: red;
-    --color-b: blue;}
+    --color-b: blue;
+}
 
 main{
     min-height: 100vh;
@@ -17,6 +18,58 @@ main{
     color: #222831;
     z-index: -99;
 }
+@supports (background: paint(something)) {
+    .primary {
+        /*
+          Optionally set property values.
+          This can be done at root or local scope
+        */
+        --extra-sparkleNumber: 90; /* defaults to 30 */
+        --extra-sparkleHue: 180; /* Defaults to 60 (yellow) */
+        --extra-sparkleHeightVariance: 12; /* Defaults to 9 */
+        --extra-sparkleWidthVariance: 15; /* Defaults to 12 */
+        --extra-sparkleWeightVariance: 3; /* Defaults to 2 */
+
+
+        background: paint(extra-sparkles);
+    }
+    .secondary{
+        --extra-sparkleNumber: 50; /* defaults to 30 */
+        --extra-sparkleHue: 40; /* Defaults to 60 (yellow) */
+        --extra-sparkleHeightVariance: 9; /* Defaults to 9 */
+        --extra-sparkleWeightVariance: 3; /* Defaults to 2 */
+
+        background: paint(extra-sparkles);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    display: block;
+    background: linear-gradient(to bottom, #ffc764, #ff577f);
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(44,44,44,0.5);
+    border-radius: 25px;
+    height: 2rem;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+}
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+}
+
+
 
 .glass{
     background: aliceblue;
@@ -27,6 +80,10 @@ main{
     backdrop-filter: blur(1rem);
     z-index: 5;
     display: flex;
+}
+
+aside{
+    background-color: darkcyan;
 }
 
 .circle1,.circle2{
@@ -59,8 +116,8 @@ main{
 }
 
 .nav{
-    width: 30%;
-    height: 80vh;
+    min-width: 20vw;
+    min-height: 80vh;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -94,13 +151,13 @@ a{
     border-bottom-right-radius: 1rem;
 }
 
-#houdini{
+.houdini{
     border-radius: 100%;
     width: 10rem;
     height: auto;
 }
 
-#git{
+.git{
     margin-top: 1rem;
     width: 3rem;
     height: auto;
@@ -138,6 +195,24 @@ p{
     margin: 0;
 }
 
+.bar{
+    margin-top: 5px;
+    height: 24px;
+    width: 4in;
+    border: solid 2px #222831;
+}
+
+.fill{
+    background-color: #ff577f;
+    width: 3.955in;
+    height: 20px;
+    text-align: center;
+}
+
+#number{
+    width: 5vw;
+}
+
 .link_outside::after {
     border-top: .15em solid #ff884b;
     content: "";
@@ -148,7 +223,8 @@ p{
 }
 
 .description{
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 40vw;
     max-height: 60vh;
     margin-left: 4rem;
@@ -164,7 +240,7 @@ p{
 }
 
 .box{
-    margin: 3rem auto auto;
+    margin: 1rem auto auto;
     width: 30vmin;
     height: 30vmin;
     animation: 3s change infinite alternate linear;
@@ -192,6 +268,29 @@ p{
 #ripple.animating {
     background-image: paint(ripple);
 }
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226,226,266);
+    margin: 5px;
+}
+.responsive-nav{
+    min-width: 20vw;
+    min-height: 80vh;
+    flex-direction: column;
+    visibility: hidden;
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,1), rgba(255,255,255,0.7));
+}
 
 @keyframes change {
     from {
@@ -199,5 +298,95 @@ p{
     }
     to {
         --animated-color: var(--color-b);
+    }
+}
+
+@media screen and (max-width:1024px){
+    .houdini{
+        width: 8rem;
+    }
+}
+
+@media screen and (min-width:2048px){
+    h1{font-size: 3rem}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+ul li a {
+    font-size: 1.5rem;
+}
+}
+
+@media screen and (max-width:800px){
+    .houdini{
+        width: 6rem;
+    }
+    .nav{
+        display: none;
+    }
+    .responsive-nav{
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 1%;
+        z-index: 99;
+        transition: visibility 1s;
+        min-width: 30vw;
+        height: 98vh;
+        border-radius: 0 25px 25px 0;
+    }
+    .burger{
+        z-index: 999;
+        background-color: rgba(34,40,49, 0.5);
+        margin: 5px;
+        position: absolute;
+        top: 1%;
+        left: 0;
+        display: block;
+    }
+    .description{
+        width: 50vw;
+    }
+    #ripple{
+        margin-left: 20%;
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .houdini{
+        width: 6rem;
+    }
+    .nav{
+        display: none;
+    }
+    .responsive-nav{
+        display: flex;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 99;
+        transition: visibility 1s;
+        min-height: 90vh;
+        min-width: 30vw;
+    }
+    .burger{
+        z-index: 999;
+        background-color: rgba(34,40,49, 0.5);
+        margin: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+    #ripple{
+        margin-left: 20%;
+    }
+    .description{
+        width: 50vw;
+        margin-left: 3rem;
     }
 }

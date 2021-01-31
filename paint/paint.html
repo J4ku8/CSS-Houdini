@@ -13,19 +13,54 @@
 </head>
 <body>
 <main>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div class="responsive-nav">
+        <div>
+            <h1><a href="../index.html">CSS Houdini </a></h1>
+            <img class="houdini" alt="CSS Houdini" src="../img/houdini.jpeg" />
+        </div>
+        <div class="active">
+            <h3>Prepared</h3>
+            <ul>
+                <li><a href="../paint/paint.html" class="link">Paint API</a></li>
+                <li><a href="../layout/layout.html" class="link">Layout API</a></li>
+                <li><a href="../animation/animation.html" class="link">Animation API</a></li>
+                <li><a href="../properties/properties.html" class="link">Properties and values</a></li>
+                <li><a href="../typedOM/typedOM.html" class="link">Typed Object Model</a></li>
+            </ul>
+        </div>
+        <div class="inactive">
+            <h3>Not read yet</h3>
+            <ul>
+                <li><a href="../parser.html" class="link">Parser API</a></li>
+                <li><a href="../font.html" class="link">Font API</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a target="_blank" style="font-weight: bold" href="https://drafts.css-houdini.org" class="source">W3 specification drafts</a></li>
+                <li><a class="source" target="_blank" href="https://github.com/w3c/css-houdini-drafts/wiki"><img class="git" alt="CSS Houdini gitHub" src="../img/git.png"/></a></li>
+            </ul>
+        </div>
+    </div>
     <section class="glass">
         <div class="nav">
             <div>
                 <h1><a href="../index.html">CSS Houdini </a></h1>
-                <img id="houdini" alt="CSS Houdini" src="../img/houdini.jpeg" />
+                <img class="houdini" alt="CSS Houdini" src="../img/houdini.jpeg" />
             </div>
             <div class="active">
                 <h3>Prepared</h3>
                 <ul>
-                    <li><a href="paint.html" class="link">Paint API</a></li>
+                    <li><a href="../paint/paint.html" class="link">Paint API</a></li>
                     <li><a href="../layout/layout.html" class="link">Layout API</a></li>
                     <li><a href="../animation/animation.html" class="link">Animation API</a></li>
                     <li><a href="../properties/properties.html" class="link">Properties and values</a></li>
+                    <li><a href="../typedOM/typedOM.html" class="link">Typed Object Model</a></li>
                 </ul>
             </div>
             <div class="inactive">
@@ -38,7 +73,7 @@
             <div class="links">
                 <ul>
                     <li><a target="_blank" style="font-weight: bold" href="https://drafts.css-houdini.org" class="source">W3 specification drafts</a></li>
-                    <li><a class="source" target="_blank" href="https://github.com/w3c/css-houdini-drafts/wiki"><img id="git" alt="CSS Houdini gitHub" src="../img/git.png"/></a></li>
+                    <li><a class="source" target="_blank" href="https://github.com/w3c/css-houdini-drafts/wiki"><img class="git" alt="CSS Houdini gitHub" src="../img/git.png"/></a></li>
                 </ul>
             </div>
         </div>
@@ -47,18 +82,48 @@
                 <h1>Paint API</h1>
             </div>
             <div class="description">
-                <p>
+                <p  class="primary">
                     The Paint API allows developers to use JavaScript functions to draw directly into an element’s background, border, or content using 2D Rendering Context, which is a subset of the HTML5 Canvas API. Paint API uses Paint Worklet to draw an image that dynamically responds to changes in CSS (changes in CSS variables, for example). Anyone familiar with Canvas API will feel right at home with Houdini’s Paint API.
                 </p>
+                <br>
+                <p class="secondary"> On the background of the text you can se that animation API can do more then animate. Try to refresh page to see change.</p><br> <p>This effect is downloaded from library. For use just use
+                <code> &lt;script src='https://unpkg.com/extra.css/sparkles.js'&gt; &lt;/script&gt; </code></p>
+                <br>
+                <button id="ripple">Click me</button>
             </div>
-            <button id="ripple">Click me</button>
         </div>
     </section>
     <div class="circle1"></div>
     <div class="circle2"></div>
 </main>
+
+<script>
+    CSS.paintWorklet.addModule('paintworklet.js');
+    const button = document.querySelector('#ripple');
+    let start = performance.now();
+    let x, y;
+    document.querySelector('#ripple').addEventListener('click', evt => {
+        button.classList.add('animating');
+        [x, y] = [evt.clientX, evt.clientY];
+        start = performance.now();
+        requestAnimationFrame(function raf(now) {
+            const count = Math.floor(now - start);
+            button.style.cssText = `--ripple-x: ${x}; --ripple-y: ${y}; --animation-tick: ${count};`;
+            if(count > 1000) {
+                button.classList.remove('animating');
+                button.style.cssText = `--animation-tick: 0`;
+                return;
+            }
+            requestAnimationFrame(raf);
+        })
+    })
+</script>
+
+<script src="../common.js">
+</script>
 <script src="../properties/properties.js">
 </script>
+<script src='https://unpkg.com/extra.css/sparkles.js'></script>
 <script src="paintworklet.js">
 </script>
 </body>

@@ -13,19 +13,54 @@
 </head>
 <body>
 <main>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div class="responsive-nav">
+        <div>
+            <h1><a href="../index.html">CSS Houdini </a></h1>
+            <img class="houdini" alt="CSS Houdini" src="../img/houdini.jpeg" />
+        </div>
+        <div class="active">
+            <h3>Prepared</h3>
+            <ul>
+                <li><a href="../paint/paint.html" class="link">Paint API</a></li>
+                <li><a href="../layout/layout.html" class="link">Layout API</a></li>
+                <li><a href="../animation/animation.html" class="link">Animation API</a></li>
+                <li><a href="../properties/properties.html" class="link">Properties and values</a></li>
+                <li><a href="../typedOM/typedOM.html" class="link">Typed Object Model</a></li>
+            </ul>
+        </div>
+        <div class="inactive">
+            <h3>Not read yet</h3>
+            <ul>
+                <li><a href="../parser.html" class="link">Parser API</a></li>
+                <li><a href="../font.html" class="link">Font API</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a target="_blank" style="font-weight: bold" href="https://drafts.css-houdini.org" class="source">W3 specification drafts</a></li>
+                <li><a class="source" target="_blank" href="https://github.com/w3c/css-houdini-drafts/wiki"><img class="git" alt="CSS Houdini gitHub" src="../img/git.png"/></a></li>
+            </ul>
+        </div>
+    </div>
     <section class="glass">
         <div class="nav">
             <div>
                 <h1><a href="../index.html">CSS Houdini </a></h1>
-                <img id="houdini" alt="CSS Houdini" src="../img/houdini.jpeg" />
+                <img class="houdini" alt="CSS Houdini" src="../img/houdini.jpeg" />
             </div>
             <div class="active">
                 <h3>Prepared</h3>
                 <ul>
                     <li><a href="../paint/paint.html" class="link">Paint API</a></li>
-                    <li><a href="layout.html" class="link">Layout API</a></li>
+                    <li><a href="../layout/layout.html" class="link">Layout API</a></li>
                     <li><a href="../animation/animation.html" class="link">Animation API</a></li>
                     <li><a href="../properties/properties.html" class="link">Properties and values</a></li>
+                    <li><a href="../typedOM/typedOM.html" class="link">Typed Object Model</a></li>
                 </ul>
             </div>
             <div class="inactive">
@@ -38,7 +73,7 @@
             <div class="links">
                 <ul>
                     <li><a target="_blank" style="font-weight: bold" href="https://drafts.css-houdini.org" class="source">W3 specification drafts</a></li>
-                    <li><a class="source" target="_blank" href="https://github.com/w3c/css-houdini-drafts/wiki"><img id="git" alt="CSS Houdini gitHub" src="../img/git.png"/></a></li>
+                    <li><a class="source" target="_blank" href="https://github.com/w3c/css-houdini-drafts/wiki"><img class="git" alt="CSS Houdini gitHub" src="../img/git.png"/></a></li>
                 </ul>
             </div>
         </div>
@@ -56,6 +91,8 @@
     <div class="circle1"></div>
     <div class="circle2"></div>
 </main>
+<script src="../common.js">
+</script>
 <script src="../properties/properties.js"></script>
 </body>
 </html>
