@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19c35ba2-43a1-4e46-aed5-e4a56c784727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typedOM/typedOM.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animation/animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/animation/animation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font.html" beforeDir="false" afterPath="$PROJECT_DIR$/font.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paint/paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/paint/paint.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paint/paintworklet.js" beforeDir="false" afterPath="$PROJECT_DIR$/paint/paintworklet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/parser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/properties/properties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +64,6 @@
       <workItem from="1610810705771" duration="7130000" />
       <workItem from="1611306879699" duration="13368000" />
       <workItem from="1611660891283" duration="1150000" />
-      <workItem from="1612083156328" duration="573000" />
     </task>
     <task id="LOCAL-00001" summary="Structure change">
       <created>1611662098600</created>
@@ -103,7 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611685125289</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[UPDATE]: Styling, some paint api. Need to finish Layout API, Animation API and Paint API.">
+      <created>1612084610912</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612084610912</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[UPDATE]: Changes about API. Restruct code">
+      <created>1612286709821</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612286709821</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +118,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/J4ku8/CSS-Houdini&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="[FIX]: Path to file." />
     <MESSAGE value="[UPDATE]: Properties and values content." />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPDATE]: Properties and values content." />
+    <MESSAGE value="[UPDATE]: Styling, some paint api. Need to finish Layout API, Animation API and Paint API." />
+    <MESSAGE value="[UPDATE]: Changes about API. Restruct code" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPDATE]: Changes about API. Restruct code" />
   </component>
 </project>

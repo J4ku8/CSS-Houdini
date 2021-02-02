@@ -86,6 +86,7 @@
                 <p>
                     The Animation API extends web animations with options to listen to various events (scroll, hover, click, etc.) and improves performance by running animations on their own dedicated thread using an Animation Worklet. It allows for user action to control the flow of animation that runs in a performant, non-blocking way.
                 </p>
+                <div id="a"></div>
             </div>
         </div>
     </section>
@@ -95,5 +96,8 @@
 <script src="../common.js">
 </script>
 <script src="../properties/properties.js"></script>
+<script>
+    CSS.animationWorklet.addModule("passthrough-aw.js");
+</script>
 </body>
 </html>
