@@ -1,0 +1,11 @@
+{
+  "name": "practical-Houdini",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": "https://github.com/J4ku8/CSS-Houdini.git",
+  "author": "jakubtichy <jakubtichy4@gmail.com>",
+  "license": "MIT"
+}

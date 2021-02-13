@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19c35ba2-43a1-4e46-aed5-e4a56c784727" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animation/animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/animation/animation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paint/paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/paint/paint.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paint/paintworklet.js" beforeDir="false" afterPath="$PROJECT_DIR$/paint/paintworklet.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +41,16 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/layout" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/layout" />
       <recent name="$PROJECT_DIR$/font" />
       <recent name="$PROJECT_DIR$/animation" />
-      <recent name="$PROJECT_DIR$/properties" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -64,6 +64,8 @@
       <workItem from="1610810705771" duration="7130000" />
       <workItem from="1611306879699" duration="13368000" />
       <workItem from="1611660891283" duration="1150000" />
+      <workItem from="1612987111171" duration="1508000" />
+      <workItem from="1613058159295" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Structure change">
       <created>1611662098600</created>

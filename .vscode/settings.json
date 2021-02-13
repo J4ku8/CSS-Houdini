@@ -1,0 +1,13 @@
+{
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.root": "/",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.https": {
+      "enable": true,
+      "cert": "/Users/jakubtichy/Documents/skola-20-21/CSSHoudini/practical-Houdini/https/localhost.pem",
+      "key": "/Users/jakubtichy/Documents/skola-20-21/CSSHoudini/practical-Houdini/https/localhost.key",
+      "passphrase": "pass"
+    }
+  }
+
+  
