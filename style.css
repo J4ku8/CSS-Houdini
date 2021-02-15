@@ -205,13 +205,13 @@ p{
 .bar{
     margin-top: 5px;
     height: 24px;
-    width: 4in;
+    width: 30vw;
     border: solid 2px #222831;
 }
 
 .fill{
     background-color: #ff577f;
-    width: 3.955in;
+    width: 29.33vw;
     height: 20px;
     text-align: center;
 }
@@ -246,13 +246,26 @@ p{
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
 }
 
+button{
+    padding: 3px;
+    margin: 1%;
+    border: none;
+    background: linear-gradient(to right top, #ffc764, #ff577f);
+    border-radius: 25px;
+}
+
+
 .box{
-    margin: 1rem auto auto;
-    width: 30vmin;
-    height: 30vmin;
+    --rotate: 45deg;
+    --scale: 0;
+    transform: rotate(var(--rotate)) scale(--scale);
+    margin: 1rem auto 1rem;
+    width: 25vmin;
+    height: 25vmin;
     animation: 3s change infinite alternate linear;
     background-color: var(--animated-color);
 }
+
 #ripple {
     margin-left: 30%;
     margin-top: 1rem;
