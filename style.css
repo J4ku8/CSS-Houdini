@@ -4,8 +4,21 @@
     box-sizing: border-box;
 }
 
-:root{--color-a: red;
-    --color-b: blue;
+:root{
+    
+    @property --color-a {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: red;
+      }
+
+    /* --color-a: red;
+    --color-b: blue; */
+    @property --color-b {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: blue;
+      }
 }
 
 main{
@@ -211,13 +224,14 @@ p{
 
 .fill{
     background-color: #ff577f;
-    width: 29.33vw;
+    width: 15vw;
     height: 20px;
     text-align: center;
 }
 
 #number{
     width: 5vw;
+    --value: 0;
 }
 
 .link_outside::after {
@@ -245,13 +259,27 @@ p{
     padding: 1.5rem;
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
 }
+.buttonGroup{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+.boxEffect{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+#example{
+    background: #ff577f;
+}
 
 button{
     padding: 3px;
     margin: 1%;
     border: none;
     background: linear-gradient(to right top, #ffc764, #ff577f);
-    border-radius: 25px;
+    border-radius: 6px;
 }
 
 

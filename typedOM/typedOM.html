@@ -98,21 +98,36 @@
             </p>  
             <br>
             <h3>Changing property by CSSOM.</h3>
-            <p id='cssom'>Color of text changhed by CSSOM</p>
+            <p id='cssom'>Color of text changhed by CSSOM.</p>
+            <br>
+            <h3>Changing property by TOM.</h3>
+            <p id='tom'>Color of text changhed by TOM.</p>
                 <br>
                 <h3>Changing property on hover and interaction.</h3>
-                <button id="rotatePlus">+ rotate</button><button id="rotateMinus">- rotate</button>
+                <div class="buttonGroup">
+                <button id="rotatePlus">+ rotate</button>
+                <button id="rotateMinus">- rotate</button><br>
+                <button id="scalePlusR">+ X scale</button>
+                <button id="scaleMinusR">- X scale</button><br>
+                <button id="scalePlusL">+ Y scale</button>
+                <button id="scaleMinusL">- Y scale</button>
+                </div> 
+                <div class="boxEffect">
                 <div class="box" id="box" onmouseover="opacityOn()" onmouseout="opacityOut()"></div>
-                <button id="scalePlusR">+ upper scale</button><button id="scaleMinusR">- down scale</button><br>
-                <button id="scalePlusL">+ left scale</button><button id="scaleMinusL">- left scale</button>
+                </div>
+                <br>
+                <br>
+                <h3>Click and wait!.</h3>
+                <button id="example" onclick="changeStyle()">Click!</button>
+                <br>
                 <br>
                 <h3>Changing proeprty by user input.</h3>
                 <form>
                     <label for="number">Number:</label><br>
-                    <input type="number" id="number" name="number" min="0" max="100"><br>
+                    <input type="number" id="number" name="number" min="0" max="100" oninput='calcWidth()'><br>
                 </form>
                 <div class="bar">
-                    <div class="fill" ><span id="percents">100%</span></div>
+                    <div class="fill" ><span id="percents">50%</span></div>
                 </div>
             </div>
         </div>
