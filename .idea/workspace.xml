@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19c35ba2-43a1-4e46-aed5-e4a56c784727" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/properties/properties.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typedOM/typedOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/typedOM/typedOM.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typedOM/typedOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/typedOM/typedOM.js" afterDir="false" />
@@ -42,7 +44,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -70,7 +72,10 @@
       <workItem from="1613321111063" duration="1703000" />
       <workItem from="1613382749245" duration="590000" />
       <workItem from="1613402979744" duration="42000" />
-      <workItem from="1613417256512" duration="3832000" />
+      <workItem from="1613417256512" duration="12354000" />
+      <workItem from="1614416807982" duration="3336000" />
+      <workItem from="1614941225718" duration="921000" />
+      <workItem from="1614962637218" duration="8528000" />
     </task>
     <task id="LOCAL-00001" summary="Structure change">
       <created>1611662098600</created>

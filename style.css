@@ -4,22 +4,20 @@
     box-sizing: border-box;
 }
 
-:root{
-    
+
     @property --color-a {
         syntax: '<color>';
         inherits: false;
         initial-value: red;
       }
 
-    /* --color-a: red;
-    --color-b: blue; */
+
     @property --color-b {
         syntax: '<color>';
         inherits: false;
         initial-value: blue;
       }
-}
+
 
 main{
     min-height: 100vh;
@@ -108,7 +106,7 @@ aside{
 
 .circle1,.circle2{
     --color-hover: rgba(255,255,255,1);
-    background: linear-gradient(to right bottom, var( --color-hover), rgba(255,255,255,0.5));
+    background: linear-gradient(to right bottom, var( --color-hover, rgba(255,255,255,1)), rgba(255,255,255,0.5));
     transition:  --color-hover 0.5s;
     border-radius: 10rem;
     height: 15rem;
@@ -267,7 +265,6 @@ p{
 .boxEffect{
     display: flex;
     flex-direction: row;
-   
 }
 
 #example{
@@ -316,6 +313,11 @@ button{
 #ripple.animating {
     background-image: paint(ripple);
 }
+
+
+
+
+
 .burger{
     display: none;
     cursor: pointer;
